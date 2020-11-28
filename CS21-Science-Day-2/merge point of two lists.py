@@ -1,24 +1,24 @@
 def findMergeNode(headA, headB):
-    curA = headA
-    curB = headB
-    lenA = lenB = 0
-    while curA:
-        lenA += 1
-        curA = curA.next
-    while curB:
-        lenB += 1
-        curB = curB.next
-    if lenA > lenB:
-        for i in range(lenA - lenB):
-            headA = headA.next
+    curA = headA   1
+    curB = headB   1
+    lenA = lenB = 0  1
+    while curA:  n1+1
+        lenA += 1  n1
+        curA = curA.next n1
+    while curB:  n2+1
+        lenB += 1  n2
+        curB = curB.next  n2
+    if lenA > lenB:   1
+        for i in range(lenA - lenB): n1-n2+1
+            headA = headA.next 1 n1-n2
     else:
-        for i in range(lenB - lenA):
-            headB = headB.next
+        for i in range(lenB - lenA): n2-n1+1
+            headB = headB.next  n2-n1
     while headA and headB:
-        if headA == headB:
-            return headA.data
-        headA = headA.next
-        headB = headB.next
+        if headA == headB:  
+            return headA.data   1
+        headA = headA.next    1
+        headB = headB.next    1
 
 
 if __name__ == '__main__':
@@ -63,3 +63,6 @@ if __name__ == '__main__':
         fptr.write(str(result) + '\n')
 
     fptr.close()
+     
+        
+    Then time complexity is     O(n1+n2) where n1 and n2 are number of nodes of the two linked list
