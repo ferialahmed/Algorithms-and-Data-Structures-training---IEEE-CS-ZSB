@@ -10,4 +10,4 @@ if len(text1)==len(text3):O(1)
 else: O(1)
     print("NO") O(1)
 
-Time complexity is O(n^2)
+Time complexity is O(n)
