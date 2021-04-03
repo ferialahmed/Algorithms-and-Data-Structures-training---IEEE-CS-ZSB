@@ -1,0 +1,5 @@
+string=input()
+ones=string.count('1')
+string=string.replace('1','')
+index=string.find('2')
+print(string[:index] + '1'*ones + string[index:])
